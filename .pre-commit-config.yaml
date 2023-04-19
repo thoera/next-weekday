@@ -5,6 +5,9 @@ repos:
       - id: check-yaml
         name: check-yaml
         description: Attempt to load all yaml files to check the syntax.
+      - id: check-toml
+        name: check-toml
+        description: Attempts to load all TOML files to check the syntax.
       - id: end-of-file-fixer
         name: end-of-file-fixer
         description: Make sure files end in a newline and only a newline.
