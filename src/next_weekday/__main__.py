@@ -29,10 +29,13 @@ parser.add_argument(
 
 args = parser.parse_args()
 
-if args.date is not None:
+if args.date is None:
+    args.date = datetime.datetime.now()
+else:
     args.date = datetime.datetime.strptime(args.date, r"%Y-%m-%d")
 
 print(
-    f"The number of days until {args.weekday.capitalize()} from {args.date} "
+    f"The number of days until {args.weekday.capitalize()} "
+    f"from {args.date.strftime(r'%Y-%m-%d')} "
     f"is {nb_days_until_next_weekday(date=args.date, weekday=args.weekday)}."
 )
