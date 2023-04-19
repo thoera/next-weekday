@@ -31,3 +31,13 @@ Or with some arguments:
 ```sh
 python -m next_weekday --date 2023-04-20 --weekday saturday
 ```
+
+You could also build the wheel and install it.
+
+With hatch:
+
+```sh
+pip install hatch
+hatch build --target wheel
+pip install dist/next_weekday-1.0.0-py3-none-any.whl
+```
