@@ -32,4 +32,7 @@ args = parser.parse_args()
 if args.date is not None:
     args.date = datetime.datetime.strptime(args.date, r"%Y-%m-%d")
 
-print(nb_days_until_next_weekday(date=args.date, weekday=args.weekday))
+print(
+    f"The number of days until {args.weekday.capitalize()} from {args.date} "
+    f"is {nb_days_until_next_weekday(date=args.date, weekday=args.weekday)}."
+)

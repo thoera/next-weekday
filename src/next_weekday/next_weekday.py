@@ -24,15 +24,15 @@ def nb_days_until_next_weekday(
     if date is None:
         date = datetime.datetime.now()
 
-    next_weekday = WEEKDAYS[weekday.casefold()] - date.weekday()
+    nb_days = WEEKDAYS[weekday.casefold()] - date.weekday()
 
     # If the current day is already the weekday to found, the next one is in... 7 days!
-    if next_weekday == 0:
-        next_weekday = 7
+    if nb_days == 0:
+        nb_days = 7
 
     # If the current day is next week, subtract the number of days computed
     # from a whole week.
-    if next_weekday < 0:
-        next_weekday = 7 + next_weekday
+    if nb_days < 0:
+        nb_days = 7 + nb_days
 
-    return next_weekday
+    return nb_days
